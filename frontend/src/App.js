@@ -6,6 +6,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Login from "./components/Login";
 import JwtBuild from "./admin/JwtBuilder";
 import Register from "./components/Register";
+import User from "./components/User"
 const App = () => {
   return (
     <Router>
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/admin" element={<ProtectedRoute component={Admin} roles={['admin']} />} />
         <Route path="/jwtbuild" element={<ProtectedRoute component={JwtBuild} roles={['admin']} />} />
+        <Route path="/user" element={<ProtectedRoute component={User} roles={['user']} />} />
       </Routes>
     </div>
     </Router>
